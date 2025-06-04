@@ -34,7 +34,6 @@ public class OlympicController {
     public String get2024OlympicSports(
             @RequestParam(value = "message", defaultValue = "What sports are being included in 2024 summer olympics") String message,
             @RequestParam(value = "stuffit", defaultValue = "false") boolean stuffit) {
-
         PromptTemplate promptTemplate = new PromptTemplate(olympicsSportsResource);
         Map<String, Object> map = new HashMap<>();
         map.put("question", message);
