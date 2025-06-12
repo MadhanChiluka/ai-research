@@ -32,8 +32,7 @@ public class OpenAiConfig {
     }
 
     @Bean
-    public EmbeddingModel openAiEmbeddingModel(
-            @Value("${spring.ai.openai.api-key}") String apiKey) {
+    public EmbeddingModel openAiEmbeddingModel() {
         OpenAiApi api = new OpenAiApi(apiKey);
         return new OpenAiEmbeddingModel(api);
     }
